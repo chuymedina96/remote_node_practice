@@ -1,12 +1,12 @@
 var express 	= require("express"),
-	app			= express(),
-	mongoose	= require("mongoose"),
-	request		= require("request"),
+	app					= express(),
+	mongoose		= require("mongoose"),
+	request			= require("request"),
 	bodyParser	= require("body-parser"),
-	faker		= require("faker");
+	faker				= require("faker");
 
 // Using `mongoose.connect`...
-var promise = mongoose.connect('mongodb://localhost/firstexprss', {
+mongoose.connect('mongodb://localhost/firstexprss', {
   useMongoClient: true,
   /* other options */
 });
@@ -41,6 +41,6 @@ app.get("/posts", function(req, res){
 })
 
 
-app.listen(3000, function(){
+app.listen(3002, function(){
 	console.log("Server has started!!!");
 });
